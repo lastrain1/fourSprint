@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 public class WhoTheScooterIsForPage {
 
     private final WebDriver driver;
+    private final WebElement switchToMainPageButton = getDriver().findElement(By.xpath("//a[@class='Header_LogoScooter__3lsAR']"));
 
     //Поле 'Имя"
     private final WebElement firstName = getDriver().findElement(By.xpath("//div[@class='Input_InputContainer__3NykH']//input[@placeholder='* Имя']"));
@@ -49,5 +50,9 @@ public class WhoTheScooterIsForPage {
 
     public WebElement getNextStep() {
         return nextStep;
+    }
+
+    public WebElement getSwitchToMainPageButton() {
+        return switchToMainPageButton;
     }
 }
